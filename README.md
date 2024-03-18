@@ -42,8 +42,26 @@ ENV REDIS_HOST=redis
 ENTRYPOINT ["python", "-m", "flask", "run", "--host=0.0.0.0"]
 ```
 
-
 ### 4 - O nome da imagem deve ser SEU_USUARIO_NO_DOCKER_HUB/linuxtips-giropops-senhas:1.0
+
+Foi feito o clone do repositorio do [Giropops-Senhas](https://github.com/badtuxx/giropops-senhas).
+
+```bash
+git clone https://github.com/badtuxx/giropops-senhas.git
+```
+
+Para fazer a criação da imagem preciso estar no diretorio da applicação. 
+
+```bash
+cd giropops-senhas/
+```
+
+Fazendo o build da imagem.
+
+```bash
+docker build -t edemirtoldo/linuxtips-giropops-senhas:1.0 .
+```
+
 
 ### 5 - Fazer o push da imagem para o Docker Hub, essa imagem deve ser pública
 
