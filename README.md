@@ -45,8 +45,7 @@ docker run --name redis --network redis_net -d redis
 ```
 
 
-
-### 2 - Você precisa deixar o container rodando.
+### XX - Você precisa deixar o container rodando.
 
 
 
@@ -81,18 +80,6 @@ ENTRYPOINT ["python", "-m", "flask", "run", "--host=0.0.0.0"]
 ```
 
 ### 4 - O nome da imagem deve ser SEU_USUARIO_NO_DOCKER_HUB/linuxtips-giropops-senhas:1.0
-
-Foi feito o clone do repositorio do [Giropops-Senhas](https://github.com/badtuxx/giropops-senhas).
-
-```bash
-git clone https://github.com/badtuxx/giropops-senhas.git
-```
-
-Para fazer a criação da imagem preciso estar no diretorio da applicação. 
-
-```bash
-cd giropops-senhas/
-```
 
 Fazendo o build da imagem.
 
