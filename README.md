@@ -18,7 +18,7 @@
 
 ## Atividades:
 
-### 1 - O Redis precisa ser um container
+### Executando o desafio pratico.
 
 Fozer o clone do repositorio do [Giropops-Senhas](https://github.com/badtuxx/giropops-senhas).
 
@@ -44,28 +44,8 @@ Iniciar o container do Redis.
 docker run --name redis --network redis_net -d redis
 ```
 
+Dockerfile da APP.
 
-### XX - Você precisa deixar o container rodando.
-
-
-
-
-
-
-
-
-
-### 1 - Criar um conta no Docker Hub, caso ainda não possua uma.
-
-Já possuia a conta pessoal edemirtoldo no [DockerHub](https://hub.docker.com/).
-
-### 2 - Criar uma conta no Github, caso ainda não possua uma.
-
-Já possuia conta no [Github](https://github.com/edemirtoldo) 
-
-### 3 - Criar um Dockerfile para criar uma imagem de container para a nossa App
-
-Foi criado o seguinte Dockerfile.
 
 ```Dockerfile
 FROM python:3.8-alpine
@@ -79,40 +59,41 @@ ENV REDIS_HOST=redis
 ENTRYPOINT ["python", "-m", "flask", "run", "--host=0.0.0.0"]
 ```
 
-### 4 - O nome da imagem deve ser SEU_USUARIO_NO_DOCKER_HUB/linuxtips-giropops-senhas:1.0
+Requirements.txt
 
-Fazendo o build da imagem.
+```bash
+Flask==2.1.1
+redis==4.5.2
+prometheus-client==0.16.0
+Werkzeug==2.2.2
+```
+
+Vamos fazer o build da imagem do container.
 
 ```bash
 docker build -t edemirtoldo/linuxtips-giropops-senhas:1.0 .
 ```
 
+Vamos fazer o push da imagem docker
 
-### 5 - Fazer o push da imagem para o Docker Hub, essa imagem deve ser pública
-
-Fazendo o push.
 ```bash
 docker push edemirtoldo/linuxtips-giropops-senhas:1.0
 ```
+Vamos iniciar o container do Giropops-Senhas.
 
-### 6 - Criar um repo no Github chamado LINUXtips-Giropops-Senhas, esse repo deve ser público
-
+```bash
+docker container run -itd --network redis_net -p 5000:5000 --name giropops-senhas edemirtoldo/linuxtips-giropops-senhas:1.0
+```
 
 Para criar o repositorio deve seguir a documentação do [Como criar um repositório](https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-new-repository) utilizar o nome LINUXtips-Giropops-Senhas.
  
 
-### 7 - Fazer o push do cógido da App e o Dockerfile
+Push para o repositorio criado. 
 
-
-
-
-### 8 - Criar um container utilizando a imagem criada
-
-
-
-### 9 - O nome do container deve ser giropops-senhas
-
-
-
+```bash
+git remote set-url origin  https://<seu token do github>@github.com/edemirtoldo/LINUXtips-Giropops-Senhas.git
+git branch -M main
+git push -u origin main
+```
 
 
