@@ -77,6 +77,7 @@ docker build -t edemirtoldo/linuxtips-giropops-senhas:1.0 .
 Vamos fazer o push da imagem docker
 
 ```bash
+docker login
 docker push edemirtoldo/linuxtips-giropops-senhas:1.0
 ```
 Vamos iniciar o container do Giropops-Senhas.
