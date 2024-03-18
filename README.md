@@ -26,7 +26,7 @@ Fozer o clone do repositorio do [Giropops-Senhas](https://github.com/badtuxx/gir
 git clone https://github.com/badtuxx/giropops-senhas.git
 ```
 
-Acessar o diretorio da applicação. 
+Acessar o diretorio da aplicação. 
 
 ```bash
 cd giropops-senhas/
