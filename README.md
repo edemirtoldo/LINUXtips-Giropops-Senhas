@@ -16,7 +16,7 @@
 - [x] O Redis precisa ser um container
 
 
-1 - Criar um conta no Docker Hub, caso ainda não possua uma.
+### 1 - Criar um conta no Docker Hub, caso ainda não possua uma.
 
 Já possuia a conta no [DockerHub](https://hub.docker.com/) conta edemirtoldo.
 
