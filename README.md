@@ -16,11 +16,13 @@
 - [x] O Redis precisa ser um container
 
 
+## Atividades:
+
 ### 1 - Criar um conta no Docker Hub, caso ainda não possua uma.
 
-Já possuia a conta no [DockerHub](https://hub.docker.com/) conta edemirtoldo.
+Já possuia a conta pessoal edemirtoldo no [DockerHub](https://hub.docker.com/).
 
-2 - Criar uma conta no Github, caso ainda não possua uma.
+### 2 - Criar uma conta no Github, caso ainda não possua uma.
 
 
 3 - Criar um Dockerfile para criar uma imagem de container para a nossa App
