@@ -24,25 +24,41 @@ Já possuia a conta pessoal edemirtoldo no [DockerHub](https://hub.docker.com/).
 
 ### 2 - Criar uma conta no Github, caso ainda não possua uma.
 
+Já possuia conta no [Github](https://github.com/edemirtoldo) 
 
-3 - Criar um Dockerfile para criar uma imagem de container para a nossa App
+### 3 - Criar um Dockerfile para criar uma imagem de container para a nossa App
 
-4 - O nome da imagem deve ser SEU_USUARIO_NO_DOCKER_HUB/linuxtips-giropops-senhas:1.0
+Foi criado o seguinte Dockerfile.
 
-5 - Fazer o push da imagem para o Docker Hub, essa imagem deve ser pública
+```Dockerfile
+FROM python:3.8-alpine
+
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
+
+ENV REDIS_HOST=redis
+
+ENTRYPOINT ["python", "-m", "flask", "run", "--host=0.0.0.0"]
+```
 
 
-6 - Criar um repo no Github chamado LINUXtips-Giropops-Senhas, esse repo deve ser público
+### 4 - O nome da imagem deve ser SEU_USUARIO_NO_DOCKER_HUB/linuxtips-giropops-senhas:1.0
 
-7 - Fazer o push do cógido da App e o Dockerfile
+### 5 - Fazer o push da imagem para o Docker Hub, essa imagem deve ser pública
 
-8 - Criar um container utilizando a imagem criada
 
-9 - O nome do container deve ser giropops-senhas
+### 6 - Criar um repo no Github chamado LINUXtips-Giropops-Senhas, esse repo deve ser público
 
-10 - Você precisa deixar o container rodando
+### 7 - Fazer o push do cógido da App e o Dockerfile
 
-11 - O Redis precisa ser um container
+### 8 - Criar um container utilizando a imagem criada
+
+### 9 - O nome do container deve ser giropops-senhas
+
+### 10 - Você precisa deixar o container rodando
+
+### 11 - O Redis precisa ser um container
 
 
 
